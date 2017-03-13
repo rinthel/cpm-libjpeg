@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 #-----------------------------------------------------------------------
 # CPM configuration
 #-----------------------------------------------------------------------
-set(CPM_MODULE_NAME libjpeg)
+set(CPM_MODULE_NAME jpeg)
 set(CPM_LIB_TARGET_NAME ${CPM_MODULE_NAME})
 
 if ((DEFINED CPM_DIR) AND (DEFINED CPM_UNIQUE_ID) AND (DEFINED CPM_TARGET_NAME))
@@ -51,5 +51,5 @@ CPM_EnsureRepoIsCurrent(
 add_subdirectory(${LIBJPEG_DIR})
 
 CPM_ExportAdditionalIncludeDir("${LIBJPEG_DIR}/include")
-CPM_ExportAdditionalLibraryTarget(libjpeg ${LIBJPEG_LIBRARIES})
+CPM_ExportAdditionalLibraryTarget(jpeg ${LIBJPEG_LIBRARIES})
 
