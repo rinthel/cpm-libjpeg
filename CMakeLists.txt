@@ -48,7 +48,6 @@ set(LIBJPEG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/libjpeg)
 CPM_EnsureRepoIsCurrent(
   TARGET_DIR ${LIBJPEG_DIR}
   GIT_REPOSITORY "https://github.com/LuaDist/libjpeg.git"
-  GIT_TAG "8.4.0"
   USE_CACHING TRUE
   )
 
