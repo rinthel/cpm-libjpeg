@@ -41,6 +41,7 @@ set(BUILD_EXCUTABLES OFF)
 set(BUILD_TESTS OFF)
 
 set(LIBJPEG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/libjpeg)
+set(LIBJPEG_BIN_DIR ${CMAKE_CURRENT_BINARY_DIR}/3rdParty/libjpeg)
 CPM_EnsureRepoIsCurrent(
   TARGET_DIR ${LIBJPEG_DIR}
   GIT_REPOSITORY "https://github.com/LuaDist/libjpeg.git"
@@ -50,5 +51,6 @@ CPM_EnsureRepoIsCurrent(
 add_subdirectory(${LIBJPEG_DIR})
 
 CPM_ExportAdditionalIncludeDir("${LIBJPEG_DIR}")
+CPM_ExportAdditionalIncludeDir("${LIBJPEG_BIN_DIR}")
 CPM_ExportAdditionalLibraryTarget(jpeg ${LIBJPEG_LIBRARIES})
 
