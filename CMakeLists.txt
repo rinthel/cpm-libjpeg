@@ -40,6 +40,10 @@ set(BUILD_STATIC ON)
 set(BUILD_EXCUTABLES OFF)
 set(BUILD_TESTS OFF)
 
+add_custom_command(
+  OUTPUT ${DATA_OUT}
+  COMMAND jpeg)
+
 set(LIBJPEG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdParty/libjpeg)
 CPM_EnsureRepoIsCurrent(
   TARGET_DIR ${LIBJPEG_DIR}
