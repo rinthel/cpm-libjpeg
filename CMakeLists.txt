@@ -49,6 +49,6 @@ CPM_EnsureRepoIsCurrent(
 
 add_subdirectory(${LIBJPEG_DIR})
 
-CPM_ExportAdditionalIncludeDir("${LIBJPEG_DIR}/include")
+CPM_ExportAdditionalIncludeDir("${LIBJPEG_DIR}")
 CPM_ExportAdditionalLibraryTarget(jpeg ${LIBJPEG_LIBRARIES})
 
